@@ -1,0 +1,14 @@
+.general-wrapper{
+    margin: 5%;
+    border-style: dashed;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: inherit;
+}
+
+.wrapper{
+    margin: 2%;
+    border-style: groove;
+}
+
+
