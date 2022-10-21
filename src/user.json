@@ -1,0 +1,40 @@
+{
+    "general": {
+        "name": "alejandro",
+        "surname": "muñoz Del Álamo",
+        "profile": "junior software developer",
+        "description": "Lorem Ipsum"
+    },
+    "personal": {
+        "email": "almudalamo@gmail.com",
+        "phone": "+34 671 425 749",
+        "address": "",
+        "id": ""
+    },
+    "languages": [
+        {
+            "name": "spanish",
+            "level": "native"
+        },
+        {
+            "name": "english",
+            "level": "intermediate"
+        }
+    ],
+    "education": [
+        {
+            "name": "",
+            "description": "",
+            "start": "",
+            "end": ""
+        }
+    ],
+    "experience": [
+        {
+            "name": "",
+            "description": "",
+            "start": "",
+            "end": ""
+        }
+    ]
+}
