@@ -1,4 +1,7 @@
-export class FormattedLanguage {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormattedLanguage = void 0;
+class FormattedLanguage {
     #name;
     #level;
     constructor(name, level) {
@@ -17,3 +20,4 @@ export class FormattedLanguage {
         return this.#level;
     }
 }
+exports.FormattedLanguage = FormattedLanguage;

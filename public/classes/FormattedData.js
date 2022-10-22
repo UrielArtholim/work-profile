@@ -1,8 +1,11 @@
-import { FormattedGeneral } from "./FormattedGeneral";
-import { FormattedLanguage } from "./FormattedLanguage";
-import { FormattedPersonal } from "./FormattedPersonal";
-import { FormattedTimeMilestone } from "./FormattedTimeMilestone";
-export class FormattedData {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormattedData = void 0;
+const FormattedGeneral_1 = require("./FormattedGeneral");
+const FormattedLanguage_1 = require("./FormattedLanguage");
+const FormattedPersonal_1 = require("./FormattedPersonal");
+const FormattedTimeMilestone_1 = require("./FormattedTimeMilestone");
+class FormattedData {
     #general;
     #personal;
     #languages;
@@ -31,7 +34,7 @@ export class FormattedData {
             throw "An unexpected error has ocurred. Please check the console log.";
         }
         else
-            this.#general = new FormattedGeneral(name, profile, description);
+            this.#general = new FormattedGeneral_1.FormattedGeneral(name, profile, description);
         const plainPersonal = data.getPersonalInfo();
         const email = plainPersonal.get("email");
         const address = plainPersonal.get("address");
@@ -54,20 +57,20 @@ export class FormattedData {
             throw "An unexpected error has ocurred. Please check the console log.";
         }
         else
-            this.#personal = new FormattedPersonal(email, address, phone, id);
+            this.#personal = new FormattedPersonal_1.FormattedPersonal(email, address, phone, id);
         const plainLanguages = data.getLanguagesInfo();
         plainLanguages.forEach(element => {
-            let currentLanguage = new FormattedLanguage(element.getName(), element.getLevel());
+            let currentLanguage = new FormattedLanguage_1.FormattedLanguage(element.getName(), element.getLevel());
             this.#languages.push(currentLanguage);
         });
         const plainEducation = data.getEducationInfo();
         plainEducation.forEach(element => {
-            let currentDegree = new FormattedTimeMilestone(element.getName(), element.getDescription(), element.getStartDate(), element.getEndDate());
+            let currentDegree = new FormattedTimeMilestone_1.FormattedTimeMilestone(element.getName(), element.getDescription(), element.getStartDate(), element.getEndDate());
             this.#education.push(currentDegree);
         });
         const plainExperience = data.getExperienceInfo();
         plainExperience.forEach(element => {
-            let currentJob = new FormattedTimeMilestone(element.getName(), element.getDescription(), element.getStartDate(), element.getEndDate());
+            let currentJob = new FormattedTimeMilestone_1.FormattedTimeMilestone(element.getName(), element.getDescription(), element.getStartDate(), element.getEndDate());
             this.#experience.push(currentJob);
         });
     }
@@ -87,3 +90,4 @@ export class FormattedData {
         return this.#experience;
     }
 }
+exports.FormattedData = FormattedData;

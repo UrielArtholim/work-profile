@@ -1,4 +1,7 @@
-export class FormattedTimeMilestone {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormattedTimeMilestone = void 0;
+class FormattedTimeMilestone {
     #name;
     #description;
     #time;
@@ -28,3 +31,4 @@ export class FormattedTimeMilestone {
         return this.#time;
     }
 }
+exports.FormattedTimeMilestone = FormattedTimeMilestone;

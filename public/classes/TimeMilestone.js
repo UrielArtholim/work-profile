@@ -1,4 +1,7 @@
-export class TimeMilestone {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeMilestone = void 0;
+class TimeMilestone {
     #name;
     #description;
     #start;
@@ -26,3 +29,4 @@ export class TimeMilestone {
         return date;
     }
 }
+exports.TimeMilestone = TimeMilestone;

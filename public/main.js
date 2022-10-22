@@ -1,5 +1,7 @@
-import { FormattedData } from "./classes/FormattedData";
-import { UserData } from "./classes/UserData";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const FormattedData_1 = require("./classes/FormattedData");
+const UserData_1 = require("./classes/UserData");
 // Get main structures from index.html
 const general = document.getElementById("general");
 const personal = document.getElementById("personal");
@@ -9,8 +11,8 @@ const milestones = document.getElementById("milestones");
 const education = document.getElementById("education");
 const experience = document.getElementById("experience");
 // 1. Add profile info
-const data = new UserData();
-const formattedData = new FormattedData(data);
+const data = new UserData_1.UserData();
+const formattedData = new FormattedData_1.FormattedData(data);
 if (general != null) {
     const userGeneralInfo = formattedData.getFormattableGeneralInfo()?.getFormattedInfo();
     if (userGeneralInfo != null) {

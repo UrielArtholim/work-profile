@@ -1,4 +1,7 @@
-export class FormattedGeneral {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormattedGeneral = void 0;
+class FormattedGeneral {
     #name;
     #profile;
     #description;
@@ -21,3 +24,4 @@ export class FormattedGeneral {
         return formattedGeneral;
     }
 }
+exports.FormattedGeneral = FormattedGeneral;

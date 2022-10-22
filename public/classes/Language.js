@@ -1,4 +1,7 @@
-export class Language {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Language = void 0;
+class Language {
     #name;
     #level;
     constructor(name, level) {
@@ -12,3 +15,4 @@ export class Language {
         return this.#level;
     }
 }
+exports.Language = Language;

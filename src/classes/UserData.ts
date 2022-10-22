@@ -1,6 +1,7 @@
-import user from "../user.json";
+
 import { Language } from "./Language";
 import { TimeMilestone } from "./TimeMilestone";
+import user from "../user.json";
 
 export class UserData{
     #general: Map<string, string>;

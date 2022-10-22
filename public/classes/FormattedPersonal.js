@@ -1,4 +1,7 @@
-export class FormattedPersonal {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormattedPersonal = void 0;
+class FormattedPersonal {
     #email;
     #phone;
     #address;
@@ -35,3 +38,4 @@ export class FormattedPersonal {
         return formattedPersonal;
     }
 }
+exports.FormattedPersonal = FormattedPersonal;
