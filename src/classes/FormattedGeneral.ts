@@ -1,21 +1,24 @@
-import { IFormattable } from "../interfaces/IFormattable";
+import { IFormattableInfo } from "../interfaces/IFormattableInfo";
 
-export class FormattedGeneral implements IFormattable {
+export class FormattedGeneral implements IFormattableInfo {
 	#name: HTMLSpanElement;
 	#profile: HTMLSpanElement;
 	#description: HTMLSpanElement;
 
-	constructor(name: HTMLSpanElement, profile: HTMLSpanElement, description: HTMLSpanElement) {
-		this.#name = name;
+	constructor(name: string, profile: string, description: string) {
+		this.#name = new HTMLSpanElement();
 		this.#name.setAttribute("id", "user-fullname");
-		this.#profile = profile;
+		this.#name.innerHTML = name;
+		this.#profile = new HTMLSpanElement();
 		this.#profile.setAttribute("id", "user-profile");
-		this.#description = description;
+		this.#profile.innerHTML = profile;
+		this.#description = new HTMLSpanElement();
 		this.#description.setAttribute("id", "user-description");
+		this.#description.innerText = description;
 	}
 
-	getFormattedInfo(): HTMLElement[] {
-		const formattedGeneral: HTMLElement[] = [];
+	getFormattedInfo(): HTMLSpanElement[] {
+		const formattedGeneral: HTMLSpanElement[] = [];
 		formattedGeneral.push(this.#name);
 		formattedGeneral.push(this.#profile);
 		formattedGeneral.push(this.#description);

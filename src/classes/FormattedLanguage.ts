@@ -1,21 +1,25 @@
-import { IFormattable } from "../interfaces/IFormattable";
+import { IFormattableLanguage } from "../interfaces/IFormattableLanguage";
 
-export class FormattedLanguage implements IFormattable{
-    #name: HTMLSpanElement;
-    #level: HTMLSpanElement;
+export class FormattedLanguage implements IFormattableLanguage{
+	#name: HTMLSpanElement;
+	#level: HTMLSpanElement;
 
-    constructor(name: HTMLSpanElement, level: HTMLSpanElement)
-    {
-        this.#name = name;
-        this.#name.setAttribute("class", "language");
-        this.#level = level;
-        this.#level.setAttribute("class", "language");
-    }
+	constructor(name: string, level: string) {
+		this.#name = new HTMLSpanElement();
+		this.#name.setAttribute("class", "language-text");
+		this.#name.innerText = `Language: ${name}`;
+		this.#level = new HTMLSpanElement();
+		this.#level.setAttribute("class", "language-text");
+		this.#level.innerText = `Level: ${level}`;;
+	}
 
-    getFormattedInfo(): HTMLElement[] {
-        const formattedLanguage: HTMLElement[] = [];
-        formattedLanguage.push(this.#name);
-        formattedLanguage.push(this.#level);
-        return formattedLanguage;
-    }
+	getName(): HTMLSpanElement
+	{
+		return this.#name;
+	}
+
+	getLevel(): HTMLSpanElement
+	{
+		return this.#level;
+	}
 }
